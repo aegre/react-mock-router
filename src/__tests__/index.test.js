@@ -3,8 +3,12 @@
 import React, {Component} from 'react'
 import {withRouter} from 'react-router-dom'
 import PropTypes from 'prop-types'
-import {mount} from 'enzyme'
 import MockRouter from '../index'
+
+import Enzyme, { mount } from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16'
+
+Enzyme.configure({ adapter: new Adapter() })
 
 console.error = jest.fn()
 
